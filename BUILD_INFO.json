@@ -1,5 +1,5 @@
 {
- "built_at": "2026-11-27T18:08:12",
+ "built_at": "2026-11-27T20:10:02",
  "note": "이 저장소는 원본에서 조립한 것입니다 — 파일 목록과 짧은 해시(조립한 때의 각 파일 SHA-256 앞 16자리). 실행에는 쓰이지 않습니다.",
  "shared": 128,
  "public_only": 30,
@@ -8,7 +8,7 @@
   "AGENTS.md": "2b22b042c87787c9",
   "CLAUDE.md": "6620fb1c133ce5a5",
   "LICENSE": "a89a87fb9dd53dc8",
-  "README.md": "bb5b7749080469de",
+  "README.md": "47aafd2dcf47864f",
   "bot.example.yaml": "c821cc36696f1e9f",
   "config.example.yaml": "60ed2c27c725e267",
   "control/__init__.py": "8af77036dcfa0a0a",
