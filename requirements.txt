@@ -1,0 +1,9 @@
+# Keep this file ASCII: pip on Korean Windows reads it with the system code page (cp949).
+# Tested with Python 3.11.9 and the versions below (pinned).
+pandas==2.3.3
+numpy==2.4.6
+requests==2.34.2
+PyYAML==6.0.3
+pytest==9.0.2
+# AI judge with a real Anthropic key: see requirements-ai.txt (the fake provider and everything else run without it).
+# Not included on purpose: cryptography / websockets (order-fill notice over websocket is not in this edition).

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="desk-token" content="__DESK_TOKEN__">
+<title>AI 판단</title>
+<link rel="stylesheet" href="/static/common.css">
+<link rel="stylesheet" href="/static/panes.css">
+<link rel="stylesheet" href="/tabs/ai/view.css">
+<script src="/static/common.js"></script>
+<script src="/static/panes.js"></script>
+</head>
+<body class="paned">
+<nav id="subnav"><span class="right" id="topnote"></span></nav>
+<div id="panes">
+  <div class="grid" id="p-main">
+    <section class="card" id="c-state">
+      <h3>상태 <span class="meta" id="statemeta"></span></h3>
+      <div class="body scroll" id="state"></div>
+    </section>
+    <section class="card" id="c-defs">
+      <h3>판단 목록 <span class="meta" id="defsmeta"></span></h3>
+      <div class="scroll"><table><thead><tr><th class="l">판단</th><th class="l">언제 묻나</th><th class="l">입력</th><th class="l">쓰임</th>
+        <th class="l">마지막 답</th><th>오늘 호출</th><th>비용 어림($)</th></tr></thead><tbody id="defrows"></tbody></table></div>
+      <div class="body note" id="deferrs"></div>
+    </section>
+    <section class="card" id="c-rec">
+      <h3>판단 기록 <span class="meta" id="recmeta"></span></h3>
+      <div class="body row"><select id="day"></select><span class="g" id="recnote"></span></div>
+      <div class="scroll"><table><thead><tr><th class="l">시각</th><th class="l">판단</th><th class="l">방아쇠</th><th class="l">답</th><th class="l">내보낸 것</th></tr></thead>
+        <tbody id="recrows"></tbody></table></div>
+    </section>
+    <section class="card" id="c-door">
+      <h3>지금 걸린 것 <span class="meta">모의 · 시뮬레이션 문 각각 · 지금 기준</span></h3>
+      <div class="body scroll" id="doors"></div>
+    </section>
+    <section class="card" id="c-ask">
+      <h3>한 번 묻기</h3>
+      <div class="body scroll">
+        <div class="setgrid">
+          <div class="k">판단</div><div><select id="a-judge"></select></div>
+          <div class="k">방식</div><div><select id="a-mode"><option value="fake">가짜 응답(기록만 · 비용 없음)</option><option value="real">실제 호출(비용 발생)</option></select></div>
+          <div class="k">종목(선택)</div><div><input type="text" id="a-codes" placeholder="쉼표로 — 비우면 실행기 종목"></div>
+          <div class="k">글(선택)</div><div><input type="text" id="a-text" placeholder="text 입력을 쓰는 판단만"></div>
+        </div>
+        <div class="row" style="margin-top:8px"><button class="btn blue" id="a-go">한 번 묻기</button><span class="g msg" id="a-msg"></span></div>
+        <div id="a-job"></div>
+      </div>
+    </section>
+    <section class="card" id="c-det">
+      <h3>판단 한 건 <span class="mark">AI 판단</span> <span class="meta" id="detmeta">기록에서 줄을 누르세요</span></h3>
+      <div class="body scroll" id="det"></div>
+    </section>
+  </div>
+</div>
+<script src="/tabs/ai/view.js"></script>
+</body>
+</html>

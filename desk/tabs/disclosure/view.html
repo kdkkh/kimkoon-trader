@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="desk-token" content="__DESK_TOKEN__">
+<title>공시</title>
+<link rel="stylesheet" href="/static/common.css">
+<link rel="stylesheet" href="/static/panes.css">
+<link rel="stylesheet" href="/tabs/disclosure/view.css">
+<script src="/static/common.js"></script>
+<script src="/static/panes.js"></script>
+</head>
+<body class="paned">
+<nav id="subnav"><span class="right" id="topnote"></span></nav>
+<div id="panes">
+  <div class="grid" id="p-query">
+    <section class="card">
+      <h3>오늘 공시 조회 <span class="meta">내 OpenDART 키 · 단추를 눌렀을 때만</span></h3>
+      <div class="body">
+        <div class="setgrid">
+          <div class="k">종목</div><div><input type="text" id="q-code" placeholder="6자리, 쉼표로 여럿"></div>
+          <div class="k">키</div><div id="q-key"></div>
+          <div class="k">오늘 호출</div><div class="num" id="q-calls"></div>
+        </div>
+        <div class="row" style="margin-top:10px"><button class="btn blue" id="q-go">오늘 공시 조회</button><span class="g msg" id="q-msg"></span></div>
+        <div class="note" id="q-note"></div>
+      </div>
+    </section>
+    <section class="card">
+      <h3>오늘 공시 목록 <span class="meta" id="q-meta"></span></h3>
+      <div class="scroll"><table><thead><tr><th class="l">접수일</th><th class="l">접수번호</th><th class="l">회사</th><th class="l">종목</th>
+        <th class="l">보고서명</th><th class="l">제출인</th><th class="l">원문</th></tr></thead><tbody id="q-rows"></tbody></table></div>
+      <div class="body srcline" id="q-src"></div>
+    </section>
+  </div>
+</div>
+<script src="/tabs/disclosure/view.js"></script>
+</body>
+</html>

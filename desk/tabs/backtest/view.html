@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="desk-token" content="__DESK_TOKEN__">
+<title>백테스트</title>
+<link rel="stylesheet" href="/static/common.css">
+<link rel="stylesheet" href="/tabs/backtest/view.css">
+<script src="/static/common.js"></script>
+</head>
+<body>
+<div class="grid">
+  <section class="card" id="c-list">
+    <h3>결과 목록 <span class="meta" id="listmeta"></span></h3>
+    <div class="body row"><select id="kind">
+      <option value="fill">재생 백테스트(체결 · 봉 재생)</option><option value="sim">지난 실시간 시뮬레이션</option><option value="bar">봉 백테스트</option></select>
+      <button class="btn" id="reload">다시 읽기</button></div>
+    <div class="scroll"><table><thead id="listhead"></thead><tbody id="listrows"></tbody></table></div>
+    <div class="body note" id="listnote"></div>
+  </section>
+  <section class="card" id="c-det">
+    <h3>결과 <span class="meta" id="detmeta">왼쪽에서 고르세요</span></h3>
+    <div class="body" id="dettop"></div>
+    <div class="split">
+      <div class="scroll"><table><thead id="codehead"></thead><tbody id="coderows"></tbody></table></div>
+      <div class="scroll"><table><thead id="trhead"></thead><tbody id="trrows"></tbody></table></div>
+    </div>
+  </section>
+  <section class="card" id="c-run">
+    <h3>실행 <span class="meta">자식 프로세스로 돌림 · 결과는 data/backtest/</span></h3>
+    <div class="body scroll" id="run">
+      <div class="runbox">
+        <b>봉 백테스트</b>
+        <div class="setgrid">
+          <div class="k">봉</div><div><select id="r-src"><option value="csv">받아 둔 봉 CSV (API 호출 없음)</option><option value="fetch">한투 일봉 조회</option></select></div>
+          <div class="k" id="k-csv">봉 CSV</div><div id="v-csv"><select id="r-csv"></select></div>
+          <div class="k fetch">종목</div><div class="fetch"><input type="text" id="r-code" value="" placeholder="&lt;종목코드&gt;"></div>
+          <div class="k fetch">기간(일)</div><div class="fetch"><input type="number" id="r-days" value="365"></div>
+          <div class="k">전략</div><div><select id="r-strat"></select></div>
+          <div class="k">전략 값</div><div><input type="text" id="r-params" placeholder="atrPeriod=10, factor=3"></div>
+          <div class="k">1회 금액(원)</div><div><input type="number" id="r-amount" value="1000000"></div>
+        </div>
+        <div class="row"><button class="btn blue" id="r-go">봉 백테스트 실행</button><span class="g msg" id="r-msg"></span></div>
+      </div>
+      <div class="runbox">
+        <b>트레이딩뷰 대조 검증기</b>
+        <div class="setgrid">
+          <div class="k">전략</div><div><select id="v-strat"></select></div>
+          <div class="k">봉 CSV(선택)</div><div><select id="v-csv2"></select></div>
+        </div>
+        <div class="row"><button class="btn" id="v-go">검증기 실행(합성 봉, API 호출 없음)</button><span class="g msg" id="v-msg"></span></div>
+      </div>
+      <div id="jobs"></div>
+    </div>
+  </section>
+</div>
+<script src="/tabs/backtest/view.js"></script>
+</body>
+</html>

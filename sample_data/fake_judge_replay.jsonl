@@ -1,0 +1,2 @@
+{"type": "gate", "at_ms": 4071258005000, "name": "market_regime", "gate": {"block_entries": true, "expires_ms": 4071259805000, "reason": "AI 판단 risk_off(가짜 견본)", "ref": "market_regime-sample-1"}}
+{"type": "signal", "at_ms": 4071264305000, "signal": {"id": "sample-signal-1", "source": "ai:sample_signal", "code": "999902", "action": "entry", "expires_ms": 4071264425000, "amount": 500000, "exit_by": "signal", "max_hold_min": 15, "ref": "sample_signal-sample-1", "note": "가짜 견본 신호"}}

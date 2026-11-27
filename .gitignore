@@ -1,0 +1,34 @@
+# 키 · 토큰 · 개인 설정 · 실행 결과는 올리지 않는다(키 파일은 저장소 밖 설정 폴더에 둔다 — README '키 파일')
+.env
+.env.*
+!.env.example
+*.yaml.local
+*.local.yaml
+kis_devlp.yaml
+opendart.yaml
+anthropic.yaml
+telegram.yaml
+token*.json
+tk_*.json
+ws_*.json
+# 내 설정(견본 *.example.yaml 은 올림)
+config.yaml
+judge.yaml
+desk.yaml
+bot.yaml
+judgments/*.yaml
+!judgments/*.example.yaml
+# 실행하면 생기는 것
+logs/
+state/
+data/
+!sample_data/
+*.log
+*.parquet
+*.db
+*.sqlite
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/

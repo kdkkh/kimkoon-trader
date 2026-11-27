@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="desk-token" content="__DESK_TOKEN__">
+<title>매매</title>
+<link rel="stylesheet" href="/static/common.css">
+<link rel="stylesheet" href="/tabs/trade/view.css">
+<script src="/static/common.js"></script>
+</head>
+<body>
+<div class="bar">
+  <label>날짜 <select id="day"></select></label>
+  <span class="g" id="dayinfo"></span>
+  <span class="g right" id="clock"></span>
+</div>
+<div class="grid">
+  <section class="card" id="c-run">
+    <h3>실행기 <span class="meta">상태는 10초마다 · 켜기/끄기는 확인 창 뒤</span></h3>
+    <div class="body runners" id="runners"></div>
+  </section>
+  <section class="card" id="c-sum">
+    <h3>하루 요약 <span class="meta" id="sumday"></span></h3>
+    <div class="body scroll" id="summary"></div>
+  </section>
+  <section class="card" id="c-set">
+    <h3>설정 <span class="meta" id="setmeta"></span></h3>
+    <div class="body scroll" id="settings"></div>
+  </section>
+  <section class="card" id="c-ev">
+    <h3>사건 흐름 <span class="meta" id="evmeta"></span></h3>
+    <div class="body row" id="evbar">
+      <select id="evtarget"><option value="paper">모의</option><option value="sim">시뮬레이션</option></select>
+      <span id="evcats" class="row"></span>
+    </div>
+    <div class="scroll"><table><thead><tr><th class="l">시각</th><th class="l">종류</th><th class="l">내용</th></tr></thead>
+      <tbody id="evrows"></tbody></table></div>
+  </section>
+  <section class="card" id="c-cmp">
+    <h3>모의 대 시뮬레이션 <span class="meta" id="cmpmeta"></span></h3>
+    <div class="body row"><label><input type="checkbox" id="cmpall"> 주문 없는 신호도</label></div>
+    <div class="scroll"><table><thead><tr><th class="l">봉</th><th class="l">종목</th><th class="l">신호</th>
+      <th>모의</th><th>시뮬레이션</th><th>체결가 차이(원/주)</th><th>차이 금액</th><th class="l">비고</th></tr></thead>
+      <tbody id="cmprows"></tbody></table></div>
+  </section>
+</div>
+<script src="/tabs/trade/view.js"></script>
+</body>
+</html>

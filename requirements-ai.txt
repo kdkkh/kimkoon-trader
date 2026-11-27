@@ -1,0 +1,3 @@
+# Keep this file ASCII. Only needed for the AI judge with a real Anthropic API key (judge provider: anthropic).
+# Not yet installed or tested together with requirements.txt - check before use (see README).
+anthropic>=2.0.0,<3

@@ -1,0 +1,5 @@
+#p-query { grid-template-columns: minmax(360px, 0.55fr) 1.6fr; gap: 10px; padding: 4px 16px 14px; min-height: 0; }
+.setgrid { display: grid; grid-template-columns: 96px 1fr; gap: 6px 10px; align-items: center; }
+.setgrid .k { color: var(--gray); font-size: 12.5px; }
+.setgrid input, .setgrid select { width: 100%; }
+td.wrap { white-space: normal; }
